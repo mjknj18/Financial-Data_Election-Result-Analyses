@@ -10,9 +10,15 @@ with open('Budget_Data.csv') as input_file:
 
         for column in row:
             if count_1 == 0:
-                print(column)
+                if column.lower().find('date') >= 0:
+                    date_column = count_2
+                elif column.lower().find('profit') >= 0 or column.lower().find('losses') >= 0:
+                    budget_column = count_2
+            else:
+                c = 1
 
             count_2 = count_2 + 1
 
         count_1 = count_1 + 1
         
+    print(count_1 - 1)
