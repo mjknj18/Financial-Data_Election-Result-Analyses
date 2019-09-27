@@ -50,11 +50,17 @@ def Election_Analysis(election_input, election_output):
 
     winner = candidate_list[winner_index]
 
-    print(total_votes)
-    print(candidate_list)
-    print(candidate_distribution)
-    print(candidate_votes)
-    print(winner)
+    print('\n')
+    print('Election Results')
+    print('------------------------------')
+    print('Total Votes: ' + str(total_votes))
+    print('------------------------------')
+    
+    for count_4 in range(len(candidate_list)):
+        print(candidate_list[count_4] + ': ' + str(candidate_distribution[count_4]) + '% (' + str(candidate_votes[count_4]) + ')')
+
+    print('------------------------------')
+    print('Winner: ' + winner)
 
 def Financial_Analysis(financial_input, financial_output):
     with open(financial_input) as input_file:
@@ -126,6 +132,7 @@ def Financial_Analysis(financial_input, financial_output):
     increase_date = change_dates[increase_index + 1]
     decrease_date = change_dates[decrease_index + 1]
 
+    print('\n')
     print('Financial Analysis')
     print('------------------------------')
     print('Total Months: ' + str(total_months))
