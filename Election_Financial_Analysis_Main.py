@@ -1,5 +1,15 @@
+import os
 import csv
 from statistics import mean
+
+current_path = os.getcwd()
+current_directory = os.listdir()
+
+for item in current_directory:
+    if item.lower().find('election') >= 0:
+        print(x = 1)
+    elif item.lower().find('election') >= 0:
+        print(x = 2)
 
 with open('Budget_Data.csv') as input_file:
     budget_data = csv.reader(input_file, delimiter = ',')
