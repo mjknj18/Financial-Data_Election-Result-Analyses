@@ -17,8 +17,17 @@ def Election_Analysis(election_input, election_output):
                         candidate_column = count_2
 
                     candidate_list = []
+                    candidate_votes = []
                 else:
+                    if count_2 == candidate_column:
+                        count_3 = 0
 
+                        for name in candidate_list:
+                            if name == column and count_3 == 0:
+                                count_3 = 1
+
+                        if count_3 == 0:
+                            candidate_list.append(column)
 
                 count_2 = count_2 + 1
 
@@ -27,6 +36,7 @@ def Election_Analysis(election_input, election_output):
     total_votes = count_1 - 1
 
     print(total_votes)
+    print(candidate_list)
 
 def Financial_Analysis(financial_input, financial_output):
     with open(financial_input) as input_file:
