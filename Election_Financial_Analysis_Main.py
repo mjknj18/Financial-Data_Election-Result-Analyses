@@ -8,7 +8,7 @@ current_directory = os.listdir()
 for item in current_directory:
     if item.lower().find('election') >= 0:
         print(x = 1)
-    elif item.lower().find('election') >= 0:
+    elif item.lower().find('financial') >= 0:
         print(x = 2)
 
 with open('Budget_Data.csv') as input_file:
