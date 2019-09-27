@@ -41,6 +41,11 @@ def Election_Analysis(election_input, election_output):
 
     total_votes = count_1 - 1
 
+    candidate_distribution = []
+
+    for votes in candidate_votes:
+        candidate_distribution.append(round((votes / sum(candidate_votes)) * 100, 3))
+
     
 
     print(total_votes)
