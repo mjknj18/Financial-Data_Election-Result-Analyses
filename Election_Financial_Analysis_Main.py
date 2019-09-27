@@ -62,6 +62,21 @@ def Election_Analysis(election_input, election_output):
     print('------------------------------')
     print('Winner: ' + winner)
 
+    output_file = open(election_output, 'w')
+
+    output_file.write('Election Results')
+    output_file.write('------------------------------')
+    output_file.write('Total Votes: ' + str(total_votes))
+    output_file.write('------------------------------')
+    
+    for count_5 in range(len(candidate_list)):
+        output_file.write(candidate_list[count_4] + ': ' + str(candidate_distribution[count_5]) + '% (' + str(candidate_votes[count_5]) + ')')
+
+    output_file.write('------------------------------')
+    output_file.write('Winner: ' + winner)
+
+    output_file.close()
+
 def Financial_Analysis(financial_input, financial_output):
     with open(financial_input) as input_file:
         budget_data = csv.reader(input_file, delimiter = ',')
@@ -141,7 +156,17 @@ def Financial_Analysis(financial_input, financial_output):
     print('Greatest Increase in Profits: ' + increase_date + ' ($' + str(greatest_increase) + ')')
     print('Greatest Decrease in Profits: ' + decrease_date + ' ($' + str(greatest_decrease) + ')')
 
-    #Add Output File
+    output_file = open(financial_output, 'w')
+
+    output_file.write('Financial Analysis')
+    output_file.write('------------------------------')
+    output_file.write('Total Months: ' + str(total_months))
+    output_file.write('Total: $' + str(budget_total))
+    output_file.write('Average Change: $' + str(average_change))
+    output_file.write('Greatest Increase in Profits: ' + increase_date + ' ($' + str(greatest_increase) + ')')
+    output_file.write('Greatest Decrease in Profits: ' + decrease_date + ' ($' + str(greatest_decrease) + ')')
+
+    output_file.close()
 
 current_path = os.getcwd()
 current_directory = os.listdir()
