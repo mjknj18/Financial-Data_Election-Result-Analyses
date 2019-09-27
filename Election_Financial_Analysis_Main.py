@@ -2,8 +2,8 @@ import os
 import csv
 from statistics import mean
 
-def Financial_Analysis():
-    with open('Budget_Data.csv') as input_file:
+def Financial_Analysis(financial_input, financial_output):
+    with open(financial_input) as input_file:
         budget_data = csv.reader(input_file, delimiter = ',')
 
         count_1 = 0
@@ -14,7 +14,7 @@ def Financial_Analysis():
             for column in row:
                 if count_1 == 0:
                     if column.lower().find('date') >= 0:
-                        date_column = count_2
+                        pass
                     elif column.lower().find('profit') >= 0 or column.lower().find('losses') >= 0:
                         budget_column = count_2
 
@@ -46,19 +46,19 @@ def Financial_Analysis():
             if count_3 == 0:
                 pass
             else:
-                change_deltas.append(change_amounts[count_3] - change_amounts[count_3 - 1])
+                change_deltas.append(item - change_amounts[count_3 - 1])
 
-                if change_amounts[count_3] > 0 and change_amounts[count_3 - 1] > 0:
-                    net_change.append(abs(change_amounts[count_3]) - abs(change_amounts[count_3 - 1]))
-                elif change_amounts[count_3] > 0 and change_amounts[count_3 - 1] < 0:
-                    net_change.append(abs(change_amounts[count_3]) + abs(change_amounts[count_3 - 1]))
-                elif change_amounts[count_3] < 0 and change_amounts[count_3 - 1] > 0:
-                    net_change.append(-1 * (abs(change_amounts[count_3]) + abs(change_amounts[count_3 - 1])))
-                elif change_amounts[count_3] < 0 and change_amounts[count_3 - 1] < 0:
-                    if change_amounts[count_3] > change_amounts[count_3 - 1]:
-                        net_change.append(-1 * (abs(change_amounts[count_3]) - abs(change_amounts[count_3 - 1])))
+                if item > 0 and change_amounts[count_3 - 1] > 0:
+                    net_change.append(abs(item) - abs(change_amounts[count_3 - 1]))
+                elif item > 0 and change_amounts[count_3 - 1] < 0:
+                    net_change.append(abs(item) + abs(change_amounts[count_3 - 1]))
+                elif item < 0 and change_amounts[count_3 - 1] > 0:
+                    net_change.append(-1 * (abs(item) + abs(change_amounts[count_3 - 1])))
+                elif item < 0 and change_amounts[count_3 - 1] < 0:
+                    if item > change_amounts[count_3 - 1]:
+                        net_change.append(-1 * (abs(item) - abs(change_amounts[count_3 - 1])))
                     else:
-                        net_change.append(abs(change_amounts[count_3]) - abs(change_amounts[count_3 - 1]))
+                        net_change.append(abs(item) - abs(change_amounts[count_3 - 1]))
                 else:
                     net_change.append(0)
 
@@ -68,11 +68,19 @@ def Financial_Analysis():
         greatest_increase = max(net_change)
         greatest_decrease = min(net_change)
 
-        print(total_months)
-        print(budget_total)
-        print(average_change)
-        print(greatest_increase)
-        print(greatest_decrease)
+        increase_index = net_change.index(greatest_increase)
+        decrease_index = net_change.index(greatest_decrease)
+
+        increase_date = change_dates[increase_index + 1]
+        decrease_date = change_dates[decrease_index + 1]
+
+        print('Financial Analysis')
+        print('------------------------------')
+        print('Total Months: ' + str(total_months))
+        print('Total: $' + str(budget_total))
+        print('Average Change: $' + str(average_change))
+        print('Greatest Increase in Profits: ' + increase_date + ' ($' + str(greatest_increase) + ')')
+        print('Greatest Decrease in Profits: ' + decrease_date + ' ($' + str(greatest_decrease) + ')')
 
 current_path = os.getcwd()
 current_directory = os.listdir()
@@ -93,4 +101,4 @@ for item in current_directory:
 
                 financial_input = os.path.join(current_path, item, data)
 
-Financial_Analysis()
+Financial_Analysis(financial_input, financial_output)
