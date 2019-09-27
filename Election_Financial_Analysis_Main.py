@@ -1,55 +1,95 @@
+#Import Modules
 import os
 import csv
 from statistics import mean
 
+#Define Election Data Processing Function
 def Election_Analysis(election_input, election_output):
+
+    #Open Election Data CSV File
     with open(election_input) as input_file:
+
+        #Import Election Data from CSV File
         election_data = csv.reader(input_file, delimiter = ',')
 
+        #Set Counter Variable for Row Number
         count_1 = 0
 
+        #Loop Through Rows in Election Data CSV
         for row in election_data:
+
+            #Set Counter Variable for Column Number
             count_2 = 0
 
+            #Loop Through Columns in Each Row
             for column in row:
+
+                #Define Condition for Header Row
                 if count_1 == 0:
+
+                    #Find Column with Candidate Names
                     if column.lower().find('candidate') >= 0:
+                        
+                        #Assign Variable for Column Number of Candidate Names
                         candidate_column = count_2
 
+                    #Define Lists for Candidate Names and Vote Count
                     candidate_list = []
                     candidate_votes = []
                 else:
+                    #Define Condition for Candidate Name Column in Data Rows
                     if count_2 == candidate_column:
+                        
+                        #Set Counter Variable for Candidate Name Existence
                         count_3 = 0
 
+                        #Loop Through Names in Candidate Name List
                         for name in candidate_list:
+                            
+                            #Set Condition for Candidate Name Already in Candidate Name List
                             if name == column and count_3 == 0:
+                                #Find Index Position of Name in Candidate Name List
                                 list_position = candidate_list.index(name)
 
+                                #Add One Vote to Appropriate Current Tally of Candidate Votes in Candidate Vote List
                                 candidate_votes[list_position] = candidate_votes[list_position] + 1
 
+                                #Update Counter Variable for Candidate Name Existence
                                 count_3 = 1
 
+                        #Set Condition for Candidate Name Not Found in Candidate Name List
                         if count_3 == 0:
+                            #Add Candidate Name to Candidate Name List
                             candidate_list.append(column)
 
+                            #
                             candidate_votes.append(1)
 
+                #Increment Column Number
                 count_2 = count_2 + 1
 
+            #Increment Row Number
             count_1 = count_1 + 1
 
+    #Calculate Total Votes Cast
     total_votes = count_1 - 1
 
+    #Define Array for Candidate Vote Distribution
     candidate_distribution = []
 
+    #Loop Through Array of Candidate Votes
     for votes in candidate_votes:
+        
+        #Calculate Candidate Vote Distribution & Add to Candidate Vote Distribution Array
         candidate_distribution.append(round((votes / sum(candidate_votes)) * 100, 3))
 
+    #Find Index Position of Winnin Candidate Based on Vote Distribution
     winner_index = candidate_distribution.index(max(candidate_distribution))
 
+    #Extract Name of Winning Candidate
     winner = candidate_list[winner_index]
 
+    #Output Election Results to Terminal
     print('\n')
     print('Election Results')
     print('------------------------------')
@@ -62,8 +102,10 @@ def Election_Analysis(election_input, election_output):
     print('------------------------------')
     print('Winner: ' + winner)
 
+    #Create Election Results Text File
     output_file = open(election_output, 'w')
 
+    #Output Election Results to Text File
     output_file.write('Election Results\n')
     output_file.write('------------------------------\n')
     output_file.write('Total Votes: ' + str(total_votes) + '\n')
@@ -75,6 +117,7 @@ def Election_Analysis(election_input, election_output):
     output_file.write('------------------------------\n')
     output_file.write('Winner: ' + winner + '\n')
 
+    #Close Election Results Text File
     output_file.close()
 
 def Financial_Analysis(financial_input, financial_output):
