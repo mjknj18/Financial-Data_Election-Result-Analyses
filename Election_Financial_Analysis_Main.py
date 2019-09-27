@@ -64,16 +64,16 @@ def Election_Analysis(election_input, election_output):
 
     output_file = open(election_output, 'w')
 
-    output_file.write('Election Results')
-    output_file.write('------------------------------')
-    output_file.write('Total Votes: ' + str(total_votes))
-    output_file.write('------------------------------')
+    output_file.write('Election Results\n')
+    output_file.write('------------------------------\n')
+    output_file.write('Total Votes: ' + str(total_votes) + '\n')
+    output_file.write('------------------------------\n')
     
     for count_5 in range(len(candidate_list)):
-        output_file.write(candidate_list[count_4] + ': ' + str(candidate_distribution[count_5]) + '% (' + str(candidate_votes[count_5]) + ')')
+        output_file.write(candidate_list[count_4] + ': ' + str(candidate_distribution[count_5]) + '% (' + str(candidate_votes[count_5]) + ')\n')
 
-    output_file.write('------------------------------')
-    output_file.write('Winner: ' + winner)
+    output_file.write('------------------------------\n')
+    output_file.write('Winner: ' + winner + '\n')
 
     output_file.close()
 
@@ -158,13 +158,13 @@ def Financial_Analysis(financial_input, financial_output):
 
     output_file = open(financial_output, 'w')
 
-    output_file.write('Financial Analysis')
-    output_file.write('------------------------------')
-    output_file.write('Total Months: ' + str(total_months))
-    output_file.write('Total: $' + str(budget_total))
-    output_file.write('Average Change: $' + str(average_change))
-    output_file.write('Greatest Increase in Profits: ' + increase_date + ' ($' + str(greatest_increase) + ')')
-    output_file.write('Greatest Decrease in Profits: ' + decrease_date + ' ($' + str(greatest_decrease) + ')')
+    output_file.write('Financial Analysis\n')
+    output_file.write('------------------------------\n')
+    output_file.write('Total Months: ' + str(total_months) + '\n')
+    output_file.write('Total: $' + str(budget_total) + '\n')
+    output_file.write('Average Change: $' + str(average_change) + '\n')
+    output_file.write('Greatest Increase in Profits: ' + increase_date + ' ($' + str(greatest_increase) + ')\n')
+    output_file.write('Greatest Decrease in Profits: ' + decrease_date + ' ($' + str(greatest_decrease) + ')\n')
 
     output_file.close()
 
