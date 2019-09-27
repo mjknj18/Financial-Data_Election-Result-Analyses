@@ -46,12 +46,15 @@ def Election_Analysis(election_input, election_output):
     for votes in candidate_votes:
         candidate_distribution.append(round((votes / sum(candidate_votes)) * 100, 3))
 
-    
+    winner_index = candidate_distribution.index(max(candidate_distribution))
+
+    winner = candidate_list[winner_index]
 
     print(total_votes)
     print(candidate_list)
     print(candidate_distribution)
     print(candidate_votes)
+    print(winner)
 
 def Financial_Analysis(financial_input, financial_output):
     with open(financial_input) as input_file:
