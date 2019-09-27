@@ -70,7 +70,7 @@ def Election_Analysis(election_input, election_output):
     output_file.write('------------------------------\n')
     
     for count_5 in range(len(candidate_list)):
-        output_file.write(candidate_list[count_4] + ': ' + str(candidate_distribution[count_5]) + '% (' + str(candidate_votes[count_5]) + ')\n')
+        output_file.write(candidate_list[count_5] + ': ' + str(candidate_distribution[count_5]) + '% (' + str(candidate_votes[count_5]) + ')\n')
 
     output_file.write('------------------------------\n')
     output_file.write('Winner: ' + winner + '\n')
