@@ -47,6 +47,7 @@ def Election_Analysis(election_input, election_output):
                             
                             #Set Condition for Candidate Name Already in Candidate Name List
                             if name == column and count_3 == 0:
+                                
                                 #Find Index Position of Name in Candidate Name List
                                 list_position = candidate_list.index(name)
 
@@ -58,6 +59,7 @@ def Election_Analysis(election_input, election_output):
 
                         #Set Condition for Candidate Name Not Found in Candidate Name List
                         if count_3 == 0:
+                            
                             #Add Candidate Name to Candidate Name List
                             candidate_list.append(column)
 
@@ -73,13 +75,13 @@ def Election_Analysis(election_input, election_output):
     #Calculate Total Votes Cast
     total_votes = count_1 - 1
 
-    #Define Array for Candidate Vote Distribution
+    #Define List for Candidate Vote Distribution
     candidate_distribution = []
 
-    #Loop Through Array of Candidate Votes
+    #Loop Through List of Candidate Votes
     for votes in candidate_votes:
         
-        #Calculate Candidate Vote Distribution & Add to Candidate Vote Distribution Array
+        #Calculate Candidate Vote Distribution & Add to Candidate Vote Distribution List
         candidate_distribution.append(round((votes / sum(candidate_votes)) * 100, 3))
 
     #Find Index Position of Winning Candidate Based on Vote Distribution
@@ -192,10 +194,10 @@ def Financial_Analysis(financial_input, financial_output):
             pass
         else:
             
-            #Calculate Change Delta & Add to Appropriate List
+            #Calculate Change Delta & Add to Budget Change Delta List
             change_deltas.append(item - change_amounts[count_3 - 1])
 
-            #Define Conditions for Neighboring Change Amounts, Calculate Net Change, and Add to Appropriate List
+            #Define Conditions for Neighboring Change Amounts, Calculate Net Change, and Add to Budget Net Change List
             if item > 0 and change_amounts[count_3 - 1] > 0:
                 net_change.append(abs(item) - abs(change_amounts[count_3 - 1]))
             elif item > 0 and change_amounts[count_3 - 1] < 0:
