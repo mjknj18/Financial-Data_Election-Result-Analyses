@@ -61,7 +61,7 @@ def Election_Analysis(election_input, election_output):
                             #Add Candidate Name to Candidate Name List
                             candidate_list.append(column)
 
-                            #
+                            #Add Initial Candidate Vote to Candidate Vote List
                             candidate_votes.append(1)
 
                 #Increment Column Number
@@ -251,25 +251,45 @@ def Financial_Analysis(financial_input, financial_output):
     #Close Financial Results Text File
     output_file.close()
 
+#Find Current Path & List of Files/Folders in Current Path
 current_path = os.getcwd()
 current_directory = os.listdir()
 
+#Loop Through List of Files/Folders in Current Path
 for item in current_directory:
+    
+    #Set Condtion for Folder Containing Election Data
     if item.lower().find('election') >= 0 and item.lower().find('py') == -1:
+        
+        #Define Path Variable for Election Data Results Text File
         election_output = os.path.join(current_path, item, 'Election_Results.txt')
 
+        #Loop Through List of Files/Folders in Election Data Folder
         for data in os.listdir(os.path.join(current_path, item)):
+            
+            #Set Condition for Election Data CSV File
             if data.lower().find('election') >= 0 and data.lower().find('csv') >= 0:
 
+                #Define Path Variable for Election Data CSV File
                 election_input = os.path.join(current_path, item, data)
+    
+    #Set Condition for Folder Containing Financial Data
     elif item.lower().find('financial') >= 0 and item.lower().find('py') == -1:
+        
+        #Define Path Variable for Financial Data Results Text File
         financial_output = os.path.join(current_path, item, 'Financial_Results.txt')
 
+        #Loop Through List of Files/Folders in Financial Data Folder
         for data in os.listdir(os.path.join(current_path, item)):
+            
+            #Set Condition for Budget Data CSV File
             if data.lower().find('budget') >= 0 and data.lower().find('csv') >= 0:
 
+                #Define Path Variable for Budget Data CSV File
                 financial_input = os.path.join(current_path, item, data)
 
+#Call Election Data Processing Function
 Election_Analysis(election_input, election_output)
 
+#Call Financial Data Processing Function
 Financial_Analysis(financial_input, financial_output)
