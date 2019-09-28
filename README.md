@@ -20,7 +20,7 @@
 
 1. https://github.com/mjknj18/Financial-Data_Election-Result-Analyses/blob/master/Election_Results_Analysis/Election_Results.txt
 
-https://github.com/mjknj18/Financial-Data_Election-Result-Analyses/blob/master/Election_Results_Analysis/Election_Results.JPG
+<img src = "https://github.com/mjknj18/Financial-Data_Election-Result-Analyses/blob/master/Election_Results_Analysis/Election_Results.JPG">
 
 ### Observations
 
@@ -50,7 +50,7 @@ The baseline data used for this analysis was provided by a third party source an
 
 1. https://github.com/mjknj18/Financial-Data_Election-Result-Analyses/blob/master/Financial_Data_Analysis/Financial_Results.txt
 
-https://github.com/mjknj18/Financial-Data_Election-Result-Analyses/blob/master/Financial_Data_Analysis/Financial_Results.JPG
+<img src = "https://github.com/mjknj18/Financial-Data_Election-Result-Analyses/blob/master/Financial_Data_Analysis/Financial_Results.JPG">
 
 ### Observations
 
