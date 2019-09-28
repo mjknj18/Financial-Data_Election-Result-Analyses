@@ -15,7 +15,7 @@ def Election_Analysis(election_input, election_output):
         #Set Counter Variable for Row Number
         count_1 = 0
 
-        #Loop Through Rows in Election Data CSV
+        #Loop Through Rows in CSV File
         for row in election_data:
 
             #Set Counter Variable for Column Number
@@ -27,16 +27,15 @@ def Election_Analysis(election_input, election_output):
                 #Define Condition for Header Row
                 if count_1 == 0:
 
-                    #Find Column with Candidate Names
+                    #Find Column with Candidate Names & Assign Column Number to Vaiable
                     if column.lower().find('candidate') >= 0:
-                        
-                        #Assign Variable for Column Number of Candidate Names
                         candidate_column = count_2
 
                     #Define Lists for Candidate Names and Vote Count
                     candidate_list = []
                     candidate_votes = []
                 else:
+
                     #Define Condition for Candidate Name Column in Data Rows
                     if count_2 == candidate_column:
                         
@@ -120,33 +119,56 @@ def Election_Analysis(election_input, election_output):
     #Close Election Results Text File
     output_file.close()
 
+#Define Financial Data Processing Function
 def Financial_Analysis(financial_input, financial_output):
+    
+    #Open Budget Data CSV
     with open(financial_input) as input_file:
+        
+        #Import Budget Data from CSV File
         budget_data = csv.reader(input_file, delimiter = ',')
 
+        #Set Counter Variable for Row Number
         count_1 = 0
 
+        #Loop Through Rows in CSV File
         for row in budget_data:
+            
+            #Set Counter Variable for Column Number
             count_2 = 0
 
+            #Loop Through Columns in Each Row
             for column in row:
+                
+                #Define Condition for Header Row
                 if count_1 == 0:
+                    
+                    #Find Column with Profit/Loss Data & Assign Column Number to Variable
                     if column.lower().find('profit') >= 0 or column.lower().find('losses') >= 0:
                         budget_column = count_2
 
+                    #Initialize Total Budget Variable & Define Lists for Dates and Amount of Budget Changes
                     budget_total = 0
                     change_amounts = []
                     change_dates = []
                 else:
+
+                    #Define Condition for Profit/Loss Column in Data Rows
                     if count_2 == budget_column:
+                        
+                        #Add Current Profit/Loss Value to Total Budget Variable
                         budget_total = budget_total + int(column)
 
+                        #Add Current Profit/Loss Value to Budget Change Amount List
                         change_amounts.append(int(column))
                     else:
+                        #Add Current Date to Budget Change Date List
                         change_dates.append(column)
 
+                #Increment Column Number
                 count_2 = count_2 + 1
 
+            #Increment Row Number
             count_1 = count_1 + 1
         
     total_months = count_1 - 1
