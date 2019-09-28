@@ -10,7 +10,7 @@
 
 ### Datasets
 
-
+1. https://github.com/mjknj18/Financial-Data_Election-Result-Analyses/blob/master/Election_Results_Analysis/Election_Data.csv
 
 ### Tasks
 
@@ -38,7 +38,7 @@ The baseline data used for this analysis was provided by a third party source an
 
 ### Datasets
 
-
+1. https://github.com/mjknj18/Financial-Data_Election-Result-Analyses/blob/master/Financial_Data_Analysis/Budget_Data.csv
 
 ### Tasks
 
