@@ -82,7 +82,7 @@ def Election_Analysis(election_input, election_output):
         #Calculate Candidate Vote Distribution & Add to Candidate Vote Distribution Array
         candidate_distribution.append(round((votes / sum(candidate_votes)) * 100, 3))
 
-    #Find Index Position of Winnin Candidate Based on Vote Distribution
+    #Find Index Position of Winning Candidate Based on Vote Distribution
     winner_index = candidate_distribution.index(max(candidate_distribution))
 
     #Extract Name of Winning Candidate
@@ -171,21 +171,31 @@ def Financial_Analysis(financial_input, financial_output):
             #Increment Row Number
             count_1 = count_1 + 1
         
+    #Calculate Total Months of Budget Data Available
     total_months = count_1 - 1
 
+    #Calculate Average Monthly Budget Change
     average_change = mean(change_amounts)
 
+    #Set Counter Variable for Index in Budget Change Amount List
     count_3 = 0
 
+    #Define Lists for Budget Change Deltas and Net Change
     change_deltas = []
     net_change = []
 
+    #Loop Through Items in Budget Change Amount List
     for item in change_amounts:
+        
+        #Define Condition for First Value in List
         if count_3 == 0:
             pass
         else:
+            
+            #Calculate Change Delta & Add to Appropriate List
             change_deltas.append(item - change_amounts[count_3 - 1])
 
+            #Define Conditions for Neighboring Change Amounts, Calculate Net Change, and Add to Appropriate List
             if item > 0 and change_amounts[count_3 - 1] > 0:
                 net_change.append(abs(item) - abs(change_amounts[count_3 - 1]))
             elif item > 0 and change_amounts[count_3 - 1] < 0:
@@ -200,18 +210,23 @@ def Financial_Analysis(financial_input, financial_output):
             else:
                 net_change.append(0)
 
+        #Increment List Index Position
         count_3 = count_3 + 1
 
+    #Calculate Average Budget Change, Greatest Increase, and Greatest Decrease
     average_change = round(mean(change_deltas), 2)
     greatest_increase = max(net_change)
     greatest_decrease = min(net_change)
 
+    #Find Index Positions of Greatest Net Increase & Decrease
     increase_index = net_change.index(greatest_increase)
     decrease_index = net_change.index(greatest_decrease)
 
+    #Extract Dates of Greatest Net Increase & Decrease
     increase_date = change_dates[increase_index + 1]
     decrease_date = change_dates[decrease_index + 1]
 
+    #Output Financial Results to Terminal
     print('\n')
     print('Financial Analysis')
     print('------------------------------')
@@ -221,8 +236,10 @@ def Financial_Analysis(financial_input, financial_output):
     print('Greatest Increase in Profits: ' + increase_date + ' ($' + str(greatest_increase) + ')')
     print('Greatest Decrease in Profits: ' + decrease_date + ' ($' + str(greatest_decrease) + ')')
 
+    #Create Financial Results Text File
     output_file = open(financial_output, 'w')
 
+    #Output Financial Results to Text File
     output_file.write('Financial Analysis\n')
     output_file.write('------------------------------\n')
     output_file.write('Total Months: ' + str(total_months) + '\n')
@@ -231,6 +248,7 @@ def Financial_Analysis(financial_input, financial_output):
     output_file.write('Greatest Increase in Profits: ' + increase_date + ' ($' + str(greatest_increase) + ')\n')
     output_file.write('Greatest Decrease in Profits: ' + decrease_date + ' ($' + str(greatest_decrease) + ')\n')
 
+    #Close Financial Results Text File
     output_file.close()
 
 current_path = os.getcwd()
