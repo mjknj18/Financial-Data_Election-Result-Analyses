@@ -145,7 +145,7 @@ def Financial_Analysis(financial_input, financial_output):
                 #Define Condition for Header Row
                 if count_1 == 0:
                     
-                    #Find Column with Profit/Loss Data & Assign Column Number to Variable
+                    #Find Column with Profit Data & Assign Column Number to Variable
                     if column.lower().find('profit') >= 0 or column.lower().find('losses') >= 0:
                         budget_column = count_2
 
@@ -155,13 +155,13 @@ def Financial_Analysis(financial_input, financial_output):
                     change_dates = []
                 else:
 
-                    #Define Condition for Profit/Loss Column in Data Rows
+                    #Define Condition for Profit Column in Data Rows
                     if count_2 == budget_column:
                         
-                        #Add Current Profit/Loss Value to Total Budget Variable
+                        #Add Current Profit Value to Total Budget Variable
                         budget_total = budget_total + int(column)
 
-                        #Add Current Profit/Loss Value to Budget Change Amount List
+                        #Add Current Profit Value to Budget Change Amount List
                         change_amounts.append(int(column))
                     else:
                         #Add Current Date to Budget Change Date List
@@ -212,16 +212,16 @@ def Financial_Analysis(financial_input, financial_output):
         #Increment List Index Position
         count_3 = count_3 + 1
 
-    #Calculate Average Budget Change, Greatest Increase, and Greatest Decrease
+    #Calculate Average Budget Change, Greatest Profit Increase, and Greatest Profit Decrease
     average_change = round(mean(change_deltas), 2)
     greatest_increase = max(net_change)
     greatest_decrease = min(net_change)
 
-    #Find Index Positions of Greatest Net Increase & Decrease
+    #Find Index Positions of Greatest Profit Increase & Decrease
     increase_index = net_change.index(greatest_increase)
     decrease_index = net_change.index(greatest_decrease)
 
-    #Extract Dates of Greatest Net Increase & Decrease
+    #Extract Dates of Greatest Profit Increase & Decrease
     increase_date = change_dates[increase_index + 1]
     decrease_date = change_dates[decrease_index + 1]
 
