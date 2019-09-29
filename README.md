@@ -6,7 +6,11 @@ The goal of this project was to identify the candidates, vote totals, vote distr
 
 ### Questions
 
-
+1. What were the total number of votes cast?
+2. Who were the candidates in the election?
+3. How many votes did each candidate obtain?
+4. What percentage of the total votes did each candidate obtain?
+5. Which candidate won the election?
 
 ### Datasets
 
@@ -38,7 +42,11 @@ The goal of this project was to identify the net total of, average change in, gr
 
 ### Questions
 
-
+1. How many months of financial data were recorded?
+2. What was the net total amount of recorded profits and losses?
+3. What was the average change in the recorded profits and losses?
+4. What month had the greatest increase in profits?
+5. What month had the greatest decrease in losses?
 
 ### Datasets
 
