@@ -6,8 +6,8 @@ The goal of this project was to identify the candidates, vote totals, vote distr
 
 ### Questions
 
-1. What were the total number of votes cast?
-2. Who were the candidates in the election?
+1. Who were the candidates in the election?
+2. What was the total number of votes cast?
 3. How many votes did each candidate obtain?
 4. What percentage of the total votes did each candidate obtain?
 5. Which candidate won the election?
@@ -37,8 +37,8 @@ The goal of this project was to identify the candidates, vote totals, vote distr
 
 ### Observations
 
-1. 3,521,001 total votes were cast.
-2. The candidates were Khan, Correy, Li, and O'Tooley.
+1. The candidates were Khan, Correy, Li, and O'Tooley.
+2. The total number of votes cast was 3,521,001.
 3. The total vote distribution was 2,218,231 for Khan, 704,200 for Correy, 492,940 for Li, and 105,630 for O'Tooley.
 4. The vote percentage distribution 63.0% for Khan, 20.0% for Correy, 14.0% for Li, and 3.0% for O'Tooley.
 5. The winner of the election was Khan.
