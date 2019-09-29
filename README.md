@@ -18,14 +18,14 @@ The goal of this project was to identify the candidates, vote totals, vote distr
 
 ### Tasks
 
-1. Import Election Results Data.
-2. Sort Imported Data by Candidate.
-3. Create List of Candidate Names.
-4. Create List of Votes Obtained by Each Candidate.
-5. Calculate Total Number of Votes Cast.
-6. Calculate Percentage of Total Votes Obtained by Each Candidate.
-7. Determine Winner of Election Based on Vote Percentage Obtained.
-8. Output Results to Terminal Window and Text File.
+1. Import election results data.
+2. Sort imported data by candidate.
+3. Create list of candidate names.
+4. Create list of votes obtained by each candidate.
+5. Calculate total number of votes cast.
+6. Calculate percentage of total votes obtained by each candidate.
+7. Determine winner of election based on vote percentage obtained.
+8. Output tesults to terminal window and text file.
 
 ### Results
 
@@ -37,7 +37,11 @@ The goal of this project was to identify the candidates, vote totals, vote distr
 
 ### Observations
 
-
+1. 3,521,001 total votes were cast.
+2. The candidates were Khan, Correy, Li, and O'Tooley.
+3. The total vote distribution was 2,218,231 for Khan, 704,200 for Correy, 492,940 for Li, and 105,630 for O'Tooley.
+4. The vote percentage distribution 63.0% for Khan, 20.0% for Correy, 14.0% for Li, and 3.0% for O'Tooley.
+5. The winner of the election was Khan.
 
 ### Disclaimer
 
@@ -61,14 +65,14 @@ The goal of this project was to identify the net total of, average change in, gr
 
 ### Tasks
 
-1. Import Financial Profit & Loss Data.
-2. Sort Imported Data by Month.
-3. Create List of Individual Monthly Profit and Loss Changes.
-4. Calculate Net Total Amount of Profits and Losses.
-5. Calculate Month-to-Month Change Deltas in Profits and Losses.
-6. Calculate Average Monthly Change in Profits and Losses.
-7. Calculate Greatest Monthly Increase in Profits and Greatest Monthly Decrease in Losses.
-8. Output Results to Terminal Window and Text File.
+1. Import financial profit & loss data.
+2. Sort imported data by month.
+3. Create list of individual monthly profit and loss changes.
+4. Calculate net total amount of profits and losses.
+5. Calculate month-to-month change deltas in profits and losses.
+6. Calculate average monthly change in profits and losses.
+7. Calculate greatest monthly increase in profits and greatest monthly decrease in losses.
+8. Output results to terminal window and text file.
 
 ### Results
 
@@ -80,7 +84,11 @@ The goal of this project was to identify the net total of, average change in, gr
 
 ### Observations
 
-
+1. 86 months of financial data were recorded.
+2. The net total amount of profits and losses was $38,382,578.
+3. The average monthly change in profits and losses was $-2315.12.
+4. February 2012 had the greatest increase in profits at $1,926,159.
+5. September 2013 had the greatest decrease in losses at $-2,196,167.
 
 ### Disclaimer
 
