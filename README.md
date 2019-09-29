@@ -49,15 +49,15 @@ The baseline data used for this analysis was provided by a third party source an
 
 ## Financial Data Analysis 
 
-The goal of this project was to identify the net total of, average change in, greatest increase in, and greatest decrease in a set of financial profit and loss data. Since the baseline data was provided in CSV format, Python was used to clean and process the data, as well as calculate the desired outputs.
+The goal of this project was to identify the net total of, average change in, greatest increase in, and greatest decrease in a set of financial profit data. Since the baseline data was provided in CSV format, Python was used to clean and process the data, as well as calculate the desired outputs.
 
 ### Questions
 
 1. How many months of financial data were recorded?
-2. What was the net total amount of recorded profits and losses?
-3. What was the average monthly change in the recorded profits and losses?
-4. Which month had the greatest profit?
-5. Which month had the greatest loss?
+2. What was the net total amount of recorded profits?
+3. What was the average monthly change in the recorded profits?
+4. Which month had the greatest increase in profits?
+5. Which month had the greatest decrease in profits?
 
 ### Datasets
 
@@ -67,11 +67,11 @@ The goal of this project was to identify the net total of, average change in, gr
 
 1. Import financial profit and loss data.
 2. Sort imported data by month.
-3. Create list of individual monthly profit and loss changes.
-4. Calculate net total amount of profits and losses.
-5. Calculate month-to-month change deltas in profits and losses.
-6. Calculate average monthly change in profits and losses.
-7. Calculate month with greatest profit and month with greatest loss.
+3. Create list of individual monthly profitchanges.
+4. Calculate net total amount of profits.
+5. Calculate month-to-month change deltas in profits.
+6. Calculate average monthly change in profits.
+7. Calculate month with greatest increase in profits and month with greatest decrease in profits.
 8. Output results to terminal window and a text file.
 
 ### Results
@@ -85,10 +85,10 @@ The goal of this project was to identify the net total of, average change in, gr
 ### Observations
 
 1. Financial data was recorded for 86 months.
-2. The net total amount of profits and losses was $38,382,578.
-3. The average monthly change in profits and losses was $-2315.12.
-4. February 2012 had the greatest profit at $1,926,159.
-5. September 2013 had the greatest loss at $-2,196,167.
+2. The net total amount of profits was $38,382,578.
+3. The average monthly change in profits was $-2315.12.
+4. February 2012 had the greatest increase in profits at $1,926,159.
+5. September 2013 had the greatest decrease in profits at $-2,196,167.
 
 ### Disclaimer
 
