@@ -18,7 +18,14 @@ The goal of this project was to identify the candidates, vote totals, vote distr
 
 ### Tasks
 
-
+1. Import Election Results Data.
+2. Sort Imported Data by Candidate.
+3. Create List of Candidate Names.
+4. Create List of Votes Obtained by Each Candidate.
+5. Calculate Total Number of Votes Cast.
+6. Calculate Percentage of Total Votes Obtained by Each Candidate.
+7. Determine Winner of Election Based on Vote Percentage Obtained.
+8. Output Results to Terminal Window and Text File.
 
 ### Results
 
@@ -54,7 +61,14 @@ The goal of this project was to identify the net total of, average change in, gr
 
 ### Tasks
 
-
+1. Import Financial Profit & Loss Data.
+2. Sort Imported Data by Month.
+3. Create List of Individual Monthly Profit and Loss Changes.
+4. Calculate Net Total Amount of Profits and Losses.
+5. Calculate Average Change in Profits and Losses.
+6. Calculate Month-to-Month Change Deltas in Profits and Losses.
+7. 
+8. Output Results to Terminal Window and Text File.
 
 ### Results
 

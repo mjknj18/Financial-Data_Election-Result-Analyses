@@ -176,9 +176,6 @@ def Financial_Analysis(financial_input, financial_output):
     #Calculate Total Months of Budget Data Available
     total_months = count_1 - 1
 
-    #Calculate Average Monthly Budget Change
-    average_change = mean(change_amounts)
-
     #Set Counter Variable for Index in Budget Change Amount List
     count_3 = 0
 
