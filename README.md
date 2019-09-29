@@ -2,7 +2,7 @@
 
 ## Election Results Analysis 
 
-
+The goal of this project was to identify the candidates, vote totals, vote distribution, and overall winner of an election. Since the baseline data was provided in CSV format, Python was used to clean and process the data, as well as calculate the desired outputs.
 
 ### Questions
 
@@ -32,7 +32,7 @@ The baseline data used for this analysis was provided by a third party source an
 
 ## Financial Data Analysis 
 
-
+The goal of this project was to identify the net total of, average change in, greatest increase in, and greatest decrease in a set of financial profit and loss data. Since the baseline data was provided in CSV format, Python was used to clean and process the data, as well as calculate the desired outputs.
 
 ### Questions
 
