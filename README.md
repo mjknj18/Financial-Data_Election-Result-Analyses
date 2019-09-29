@@ -24,8 +24,8 @@ The goal of this project was to identify the candidates, vote totals, vote distr
 4. Create list of votes obtained by each candidate.
 5. Calculate total number of votes cast.
 6. Calculate percentage of total votes obtained by each candidate.
-7. Determine winner of election based on vote percentage obtained.
-8. Output tesults to terminal window and text file.
+7. Determine winner of the election based on vote percentage obtained.
+8. Output results to terminal window and a text file.
 
 ### Results
 
@@ -72,7 +72,7 @@ The goal of this project was to identify the net total of, average change in, gr
 5. Calculate month-to-month change deltas in profits and losses.
 6. Calculate average monthly change in profits and losses.
 7. Calculate greatest monthly increase in profits and greatest monthly decrease in losses.
-8. Output results to terminal window and text file.
+8. Output results to terminal window and a text file.
 
 ### Results
 
