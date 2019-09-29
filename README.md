@@ -20,7 +20,7 @@ The goal of this project was to identify the candidates, vote totals, vote distr
 
 1. https://github.com/mjknj18/Financial-Data_Election-Result-Analyses/blob/master/Election_Results_Analysis/Election_Results.txt
 
-<img src = "https://github.com/mjknj18/Financial-Data_Election-Result-Analyses/blob/master/Election_Results_Analysis/Election_Results.JPG">
+2. <img src = "https://github.com/mjknj18/Financial-Data_Election-Result-Analyses/blob/master/Election_Results_Analysis/Election_Results.JPG">
 
 ### Observations
 
@@ -50,7 +50,7 @@ The goal of this project was to identify the net total of, average change in, gr
 
 1. https://github.com/mjknj18/Financial-Data_Election-Result-Analyses/blob/master/Financial_Data_Analysis/Financial_Results.txt
 
-<img src = "https://github.com/mjknj18/Financial-Data_Election-Result-Analyses/blob/master/Financial_Data_Analysis/Financial_Results.JPG">
+2. <img src = "https://github.com/mjknj18/Financial-Data_Election-Result-Analyses/blob/master/Financial_Data_Analysis/Financial_Results.JPG">
 
 ### Observations
 
