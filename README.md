@@ -55,9 +55,9 @@ The goal of this project was to identify the net total of, average change in, gr
 
 1. How many months of financial data were recorded?
 2. What was the net total amount of recorded profits and losses?
-3. What was the average change in the recorded profits and losses?
-4. What month had the greatest monthly increase in profits?
-5. What month had the greatest monthly decrease in losses?
+3. What was the average monthly change in the recorded profits and losses?
+4. Which month had the greatest profit?
+5. Which month had the greatest loss?
 
 ### Datasets
 
@@ -65,13 +65,13 @@ The goal of this project was to identify the net total of, average change in, gr
 
 ### Tasks
 
-1. Import financial profit & loss data.
+1. Import financial profit and loss data.
 2. Sort imported data by month.
 3. Create list of individual monthly profit and loss changes.
 4. Calculate net total amount of profits and losses.
 5. Calculate month-to-month change deltas in profits and losses.
 6. Calculate average monthly change in profits and losses.
-7. Calculate greatest monthly increase in profits and greatest monthly decrease in losses.
+7. Calculate month with greatest profit and month with greatest loss.
 8. Output results to terminal window and a text file.
 
 ### Results
@@ -84,11 +84,11 @@ The goal of this project was to identify the net total of, average change in, gr
 
 ### Observations
 
-1. 86 months of financial data were recorded.
+1. Financial data was recorded for 86 months.
 2. The net total amount of profits and losses was $38,382,578.
 3. The average monthly change in profits and losses was $-2315.12.
-4. February 2012 had the greatest increase in profits at $1,926,159.
-5. September 2013 had the greatest decrease in losses at $-2,196,167.
+4. February 2012 had the greatest profit at $1,926,159.
+5. September 2013 had the greatest loss at $-2,196,167.
 
 ### Disclaimer
 
